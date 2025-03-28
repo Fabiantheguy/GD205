@@ -33,9 +33,9 @@ void boatDraw() {
   move();
   boatX = lerp(boatX, boatTargetX, 0.1);
   drawBoat();
-  retract();
-
-  // Track the distance between the boat and the net
+  retract();  
+  waveAmplitude += .1;
+  // Track the d  istance between the boat and the net
   float distanceToBoat = dist(netX, netY, boatX, boatY);
   if (netThrown) {
     if (!netLanded) {
